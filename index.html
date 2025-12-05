@@ -29,8 +29,6 @@
       padding: 18px 12px;
       text-align: center;
       box-shadow: 0 0 28px var(--neon-1);
-      border-bottom: 2px solid rgba(0, 230, 255, .25);
-      position: relative;
     }
 
     .header-inner {
@@ -43,35 +41,17 @@
       flex-wrap: wrap;
     }
 
-    .logo-svg {
-      width: 260px;
-      height: 64px;
-      display: block;
-      flex: 0 0 auto;
-    }
-
     header h1 {
       margin: 0;
       font-size: 20px;
       letter-spacing: 1px;
       color: var(--red);
-      text-shadow: 0 0 8px rgba(255,0,0,0.9);
-      font-weight: 700;
-    }
-
-    header p {
-      margin: 2px 0 0 0;
-      font-size: 13px;
-      color: rgba(255,200,200,.9);
-      text-shadow: 0 0 6px rgba(255,0,0,.3);
     }
 
     nav {
       background-color: #0b0b0b;
       padding: 10px;
       text-align: center;
-      border-top: 1px solid rgba(0,122,255,.08);
-      border-bottom: 1px solid rgba(0,122,255,.08);
     }
 
     nav a {
@@ -79,7 +59,6 @@
       margin: 0 12px;
       text-decoration: none;
       font-weight: 700;
-      font-size: 14px;
     }
 
     .search-box {
@@ -91,11 +70,10 @@
       padding: 10px 12px;
       width: 86%;
       max-width: 480px;
+      background: #0f0f12;
       border: 2px solid rgba(0,229,255,.12);
-      background: linear-gradient(180deg, #0c0c0c, #0f0f12);
-      border-radius: 8px;
-      font-size: 15px;
       color: var(--neon-1);
+      border-radius: 8px;
     }
 
     .container {
@@ -110,19 +88,16 @@
       border-radius: 10px;
       padding: 16px;
       margin-bottom: 18px;
-      box-shadow: 0 6px 20px rgba(0,0,0,.6);
     }
 
     .movie-card h2 {
       color: var(--neon-1);
-      margin: 0 0 8px 0;
       font-size: 18px;
+      margin: 0 0 8px 0;
     }
 
     .movie-card p {
-      margin: 4px 0;
       color: #cfeeff;
-      opacity: 0.9;
       font-size: 14px;
     }
 
@@ -151,14 +126,11 @@
       padding: 18px;
       background-color: #070707;
       color: #9fbfdf;
-      border-top: 1px solid rgba(0,122,255,.06);
       margin-top: 18px;
     }
 
     footer a {
       color: var(--neon-1);
-      text-decoration: none;
-      margin: 0 6px;
     }
   </style>
 </head>
@@ -166,11 +138,8 @@
 
   <header>
     <div class="header-inner">
-      <svg class="logo-svg" viewBox="0 0 640 160"></svg>
-      <div>
-        <h1>MOVIE ZONE</h1>
-        <p>සිංහල චිත්‍රපට ඔබට!</p>
-      </div>
+      <h1>MOVIE ZONE</h1>
+      <p>සිංහල චිත්‍රපට ඔබට!</p>
     </div>
   </header>
 
@@ -191,15 +160,41 @@
     <div class="movie-card">
       <h2>Bison (2024)</h2>
       <p>🗓 2024 | 🎥 1080p | 💾 1.2GB</p>
-      <a class="download-btn" href="#">📥 Download</a>
+
+      <!-- DIRECT DOWNLOAD -->
+      <a class="download-btn"
+         href="YOUR_DIRECT_DOWNLOAD_LINK_BISON"
+         download
+         target="_blank">📥 Direct Download</a>
+
+      <!-- TELEGRAM DOWNLOAD -->
+      <a class="download-btn"
+         href="https://t.me/YOUR_TELEGRAM_BOT"
+         target="_blank"
+         style="background:#0088cc;margin-left:10px;">
+         🤖 Open in Telegram
+      </a>
+
       <iframe src="" allowfullscreen></iframe>
     </div>
 
-    <!-- KANATARA CHAPTER 01 -->
+    <!-- KANATARA -->
     <div class="movie-card">
       <h2>Kanatara - Chapter 01 (2024)</h2>
       <p>🗓 2024 | 🎥 1080p | 💾 1.1GB</p>
-      <a class="download-btn" href="#">📥 Download</a>
+
+      <a class="download-btn"
+         href="YOUR_DIRECT_DOWNLOAD_LINK_KANATARA"
+         download
+         target="_blank">📥 Direct Download</a>
+
+      <a class="download-btn"
+         href="https://t.me/YOUR_TELEGRAM_BOT"
+         target="_blank"
+         style="background:#0088cc;margin-left:10px;">
+         🤖 Open in Telegram
+      </a>
+
       <iframe src="" allowfullscreen></iframe>
     </div>
 
@@ -207,30 +202,38 @@
     <div class="movie-card">
       <h2>Dude (2023)</h2>
       <p>🗓 2023 | 🎥 720p | 💾 950MB</p>
-      <a class="download-btn" href="#">📥 Download</a>
+
+      <a class="download-btn"
+         href="YOUR_DIRECT_DOWNLOAD_LINK_DUDE"
+         download
+         target="_blank">📥 Direct Download</a>
+
+      <a class="download-btn"
+         href="https://t.me/YOUR_TELEGRAM_BOT"
+         target="_blank"
+         style="background:#0088cc;margin-left:10px;">
+         🤖 Open in Telegram
+      </a>
+
       <iframe src="" allowfullscreen></iframe>
     </div>
 
   </div>
 
   <footer>
-    © 2025 MOVIE ZONE. All Rights Reserved |
-    <a href="#">About</a> |
-    <a href="#">Privacy Policy</a>
+    © 2025 MOVIE ZONE. All Rights Reserved
   </footer>
 
   <script>
     function searchMovies() {
       var input = document.getElementById("searchInput");
       var filter = input.value.toUpperCase();
-      var container = document.getElementById("movieContainer");
-      var cards = container.getElementsByClassName("movie-card");
+      var cards = document.getElementsByClassName("movie-card");
 
       for (var i = 0; i < cards.length; i++) {
         var title = cards[i].getElementsByTagName("h2")[0];
         var txtValue = title.textContent || title.innerText;
-        cards[i].style.display =
-          txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
+        cards[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
       }
     }
   </script>
