@@ -12,7 +12,7 @@
       --neon-1: #00e5ff;
       --neon-2: #0072ff;
       --bg: #070707;
-      --card: #111115;
+      --card: #0f0f12;
       --red: #ff0000;
     }
 
@@ -31,11 +31,21 @@
       box-shadow: 0 0 28px var(--neon-1);
     }
 
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
     header h1 {
       margin: 0;
-      font-size: 22px;
+      font-size: 20px;
+      letter-spacing: 1px;
       color: var(--red);
-      text-shadow: 0 0 10px rgba(255,0,0,.8);
     }
 
     nav {
@@ -58,10 +68,10 @@
 
     .search-box input {
       padding: 10px 12px;
-      width: 85%;
+      width: 86%;
       max-width: 480px;
-      background: #141418;
-      border: 2px solid rgba(0,229,255,.15);
+      background: #0f0f12;
+      border: 2px solid rgba(0,229,255,.12);
       color: var(--neon-1);
       border-radius: 8px;
     }
@@ -69,7 +79,7 @@
     .container {
       padding: 20px;
       max-width: 1100px;
-      margin: auto;
+      margin: 0 auto;
     }
 
     .movie-card {
@@ -77,18 +87,17 @@
       border: 1px solid rgba(0,229,255,.06);
       border-radius: 10px;
       padding: 16px;
-      margin-bottom: 20px;
-      box-shadow: 0 6px 20px rgba(0,0,0,.5);
+      margin-bottom: 18px;
     }
 
     .movie-card h2 {
       color: var(--neon-1);
-      margin: 0 0 10px 0;
-      font-size: 20px;
+      font-size: 18px;
+      margin: 0 0 8px 0;
     }
 
     .movie-card p {
-      color: #d6efff;
+      color: #cfeeff;
       font-size: 14px;
     }
 
@@ -100,116 +109,143 @@
       border-radius: 8px;
       display: inline-block;
       margin-top: 10px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
-    .tg-btn {
-      background: #0088cc;
-      color: white;
-      padding: 10px 18px;
-      text-decoration: none;
-      border-radius: 8px;
-      display: inline-block;
-      margin-top: 10px;
-      margin-left: 10px;
-      font-weight: 700;
-    }
-
-    /* Trailer Poster Image */
-    .trailer-img {
+    iframe {
       width: 100%;
       max-width: 560px;
-      border-radius: 10px;
-      overflow: hidden;
+      height: 315px;
+      border: none;
+      border-radius: 8px;
       margin-top: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,.6);
     }
 
-    .trailer-img img {
+    footer {
+      text-align: center;
+      padding: 18px;
+      background-color: #070707;
+      color: #9fbfdf;
+      margin-top: 18px;
+    }
+
+    footer a {
+      color: var(--neon-1);
+    }
+
+    .poster-img {
       width: 100%;
-      height: auto;
+      max-width: 350px;
+      margin: 12px auto;
+      border-radius: 10px;
       display: block;
-      object-fit: cover;
     }
-
   </style>
 </head>
 <body>
 
-<header>
-  <h1>MOVIE ZONE</h1>
-</header>
-
-<nav>
-  <a href="#">මුල් පිටුව</a>
-  <a href="#">Download</a>
-  <a href="#">Watch Online</a>
-  <a href="#">Contact</a>
-</nav>
-
-<div class="search-box">
-  <input type="text" id="searchInput" onkeyup="searchMovies()" placeholder="🔍 චිත්‍රපටය සොයන්න..." />
-</div>
-
-<div class="container" id="movieContainer">
-
-  <!-- BISON -->
-  <div class="movie-card">
-    <h2>Bison (2024)</h2>
-    <p>🗓 2024 | 🎥 1080p | 💾 1.2GB</p>
-
-    <a class="download-btn" href="#" target="_blank">📥 Direct Download</a>
-    <a class="tg-btn" href="#" target="_blank">🤖 Telegram</a>
-
-    <div class="trailer-img">
-      <img src="https://i.imgur.com/7hM3U2p.jpeg" alt="Bison Poster">
+  <header>
+    <div class="header-inner">
+      <h1>MOVIE ZONE</h1>
+      <p>සිංහල චිත්‍රපට ඔබට!</p>
     </div>
+  </header>
+
+  <nav>
+    <a href="#">මුල් පිටුව</a>
+    <a href="#">Download</a>
+    <a href="#">Watch Online</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" onkeyup="searchMovies()" placeholder="🔍 චිත්‍රපටය සොයන්න..." />
   </div>
 
-  <!-- KANATARA -->
-  <div class="movie-card">
-    <h2>Kanatara - Chapter 01 (2024)</h2>
-    <p>🗓 2024 | 🎥 1080p | 💾 1.1GB</p>
+  <div class="container" id="movieContainer">
 
-    <a class="download-btn" href="#" target="_blank">📥 Direct Download</a>
-    <a class="tg-btn" href="#" target="_blank">🤖 Telegram</a>
+    <!-- BISON -->
+    <div class="movie-card">
+      <h2>Bison (2024)</h2>
+      <img src="https://moviezone67.github.io/MOVIEZONE/download.jpeg" alt="Bison Poster" class="poster-img">
+      <p>🗓 2024 | 🎥 1080p | 💾 1.2GB</p>
 
-    <div class="trailer-img">
-      <img src="https://i.imgur.com/8XnTzuB.jpeg" alt="Kanatara Poster">
+      <a class="download-btn"
+         href="YOUR_DIRECT_DOWNLOAD_LINK_BISON"
+         download
+         target="_blank">📥 Direct Download</a>
+
+      <a class="download-btn"
+         href="https://t.me/YOUR_TELEGRAM_BOT"
+         target="_blank"
+         style="background:#0088cc;margin-left:10px;">
+         🤖 Open in Telegram
+      </a>
+
+      <iframe src="" allowfullscreen></iframe>
     </div>
+
+    <!-- KANATARA -->
+    <div class="movie-card">
+      <h2>Kanatara - Chapter 01 (2024)</h2>
+      <img src="https://moviezone67.github.io/MOVIEZONE/download%20(1).jpeg" alt="Kanatara Poster" class="poster-img">
+      <p>🗓 2024 | 🎥 1080p | 💾 1.1GB</p>
+
+      <a class="download-btn"
+         href="YOUR_DIRECT_DOWNLOAD_LINK_KANATARA"
+         download
+         target="_blank">📥 Direct Download</a>
+
+      <a class="download-btn"
+         href="https://t.me/YOUR_TELEGRAM_BOT"
+         target="_blank"
+         style="background:#0088cc;margin-left:10px;">
+         🤖 Open in Telegram
+      </a>
+
+      <iframe src="" allowfullscreen></iframe>
+    </div>
+
+    <!-- DUDE -->
+    <div class="movie-card">
+      <h2>Dude (2023)</h2>
+      <img src="https://moviezone67.github.io/MOVIEZONE/download%20(2).jpeg" alt="Dude Poster" class="poster-img">
+      <p>🗓 2023 | 🎥 720p | 💾 950MB</p>
+
+      <a class="download-btn"
+         href="YOUR_DIRECT_DOWNLOAD_LINK_DUDE"
+         download
+         target="_blank">📥 Direct Download</a>
+
+      <a class="download-btn"
+         href="https://t.me/YOUR_TELEGRAM_BOT"
+         target="_blank"
+         style="background:#0088cc;margin-left:10px;">
+         🤖 Open in Telegram
+      </a>
+
+      <iframe src="" allowfullscreen></iframe>
+    </div>
+
   </div>
 
-  <!-- DUDE -->
-  <div class="movie-card">
-    <h2>Dude (2023)</h2>
-    <p>🗓 2023 | 🎥 720p | 💾 950MB</p>
+  <footer>
+    © 2025 MOVIE ZONE. All Rights Reserved
+  </footer>
 
-    <a class="download-btn" href="#" target="_blank">📥 Direct Download</a>
-    <a class="tg-btn" href="#" target="_blank">🤖 Telegram</a>
+  <script>
+    function searchMovies() {
+      var input = document.getElementById("searchInput");
+      var filter = input.value.toUpperCase();
+      var cards = document.getElementsByClassName("movie-card");
 
-    <div class="trailer-img">
-      <img src="https://i.imgur.com/7Rk9Fyt.jpeg" alt="Dude Poster">
-    </div>
-  </div>
-
-</div>
-
-<footer style="text-align:center;padding:18px;color:#9fbfdf;">
-  © 2025 MOVIE ZONE — All Rights Reserved
-</footer>
-
-<script>
-function searchMovies(){
-  var input = document.getElementById("searchInput");
-  var filter = input.value.toUpperCase();
-  var cards = document.getElementsByClassName("movie-card");
-  for(var i=0;i<cards.length;i++){
-    var title = cards[i].getElementsByTagName("h2")[0];
-    var txtValue = title.textContent || title.innerText;
-    cards[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
-  }
-}
-</script>
+      for (var i = 0; i < cards.length; i++) {
+        var title = cards[i].getElementsByTagName("h2")[0];
+        var txtValue = title.textContent || title.innerText;
+        cards[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
+      }
+    }
+  </script>
 
 </body>
 </html>
