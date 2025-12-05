@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MOVIE ZONE - Sinhala Dubbed Movies</title>
-  <meta name="description" content="MOVIE ZONE - Sinhala dubbed movie downloads and online watch site. Download your favorite movies now." />
+  <title>MOVIE ZONE</title>
+  <meta name="description" content="MOVIE ZONE - Sinhala Movie Download & Watch Online." />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala&display=swap" rel="stylesheet">
 
   <style>
@@ -19,6 +19,7 @@
     body {
       font-family: 'Noto Sans Sinhala', sans-serif;
       margin: 0;
+      padding: 0;
       background-color: var(--bg);
       color: #fff;
     }
@@ -28,19 +29,49 @@
       padding: 18px 12px;
       text-align: center;
       box-shadow: 0 0 28px var(--neon-1);
+      border-bottom: 2px solid rgba(0, 230, 255, .25);
+      position: relative;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .logo-svg {
+      width: 260px;
+      height: 64px;
+      display: block;
+      flex: 0 0 auto;
     }
 
     header h1 {
       margin: 0;
       font-size: 20px;
+      letter-spacing: 1px;
       color: var(--red);
       text-shadow: 0 0 8px rgba(255,0,0,0.9);
+      font-weight: 700;
+    }
+
+    header p {
+      margin: 2px 0 0 0;
+      font-size: 13px;
+      color: rgba(255,200,200,.9);
+      text-shadow: 0 0 6px rgba(255,0,0,.3);
     }
 
     nav {
       background-color: #0b0b0b;
       padding: 10px;
       text-align: center;
+      border-top: 1px solid rgba(0,122,255,.08);
+      border-bottom: 1px solid rgba(0,122,255,.08);
     }
 
     nav a {
@@ -48,6 +79,7 @@
       margin: 0 12px;
       text-decoration: none;
       font-weight: 700;
+      font-size: 14px;
     }
 
     .search-box {
@@ -59,8 +91,11 @@
       padding: 10px 12px;
       width: 86%;
       max-width: 480px;
+      border: 2px solid rgba(0,229,255,.12);
+      background: linear-gradient(180deg, #0c0c0c, #0f0f12);
       border-radius: 8px;
       font-size: 15px;
+      color: var(--neon-1);
     }
 
     .container {
@@ -71,14 +106,24 @@
 
     .movie-card {
       background-color: var(--card);
+      border: 1px solid rgba(0,229,255,.06);
       border-radius: 10px;
       padding: 16px;
       margin-bottom: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.6);
     }
 
     .movie-card h2 {
       color: var(--neon-1);
       margin: 0 0 8px 0;
+      font-size: 18px;
+    }
+
+    .movie-card p {
+      margin: 4px 0;
+      color: #cfeeff;
+      opacity: 0.9;
+      font-size: 14px;
     }
 
     .download-btn {
@@ -96,85 +141,99 @@
       width: 100%;
       max-width: 560px;
       height: 315px;
+      border: none;
       border-radius: 8px;
-      margin-top: 10px;
+      margin-top: 12px;
     }
 
     footer {
       text-align: center;
       padding: 18px;
       background-color: #070707;
+      color: #9fbfdf;
+      border-top: 1px solid rgba(0,122,255,.06);
       margin-top: 18px;
     }
 
-    @media (max-width:600px){
-      header h1 { font-size: 18px; }
+    footer a {
+      color: var(--neon-1);
+      text-decoration: none;
+      margin: 0 6px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>MOVIE ZONE</h1>
-  <p>සිංහල ඩබ් සිනමා</p>
-</header>
+  <header>
+    <div class="header-inner">
+      <svg class="logo-svg" viewBox="0 0 640 160"></svg>
+      <div>
+        <h1>MOVIE ZONE</h1>
+        <p>සිංහල චිත්‍රපට ඔබට!</p>
+      </div>
+    </div>
+  </header>
 
-<nav>
-  <a href="#">මුල් පිටුව</a>
-  <a href="#">Download</a>
-  <a href="#">Watch Online</a>
-  <a href="#">Contact</a>
-</nav>
+  <nav>
+    <a href="#">මුල් පිටුව</a>
+    <a href="#">Download</a>
+    <a href="#">Watch Online</a>
+    <a href="#">Contact</a>
+  </nav>
 
-<div class="search-box">
-  <input type="text" id="searchInput" onkeyup="searchMovies()" placeholder="🔍 චිත්‍රපටය සොයන්න..." />
-</div>
-
-<div class="container" id="movieContainer">
-
-  <!-- MOVIE 01 -->
-  <div class="movie-card">
-    <h2>BISON (2025)</h2>
-    <p>🗓 2025 | 🗣 TAMIL | 🎥 720p | 💾 950MB</p>
-    <a class="download-btn" href="https://example.com/bison.mp4" download>📥 බාගන්න</a>
-    <iframe src="https://www.youtube.com/embed/vUQj-OqQ4LY" allowfullscreen></iframe>
+  <div class="search-box">
+    <input type="text" id="searchInput" onkeyup="searchMovies()" placeholder="🔍 චිත්‍රපටය සොයන්න..." />
   </div>
 
-  <!-- MOVIE 02 -->
-  <div class="movie-card">
-    <h2>KANTARA A LEGEND CHAPTER: 01 (2025)</h2>
-    <p>🗓 2025 | 🗣 KANNADA | 🎥 1080p | 💾 1.5GB</p>
-    <a class="download-btn" href="https://example.com/kantara.mp4" download>📥 බාගන්න</a>
-    <iframe src="https://www.youtube.com/embed/gKJMgeEvSyE" allowfullscreen></iframe>
+  <div class="container" id="movieContainer">
+
+    <!-- BISON -->
+    <div class="movie-card">
+      <h2>Bison (2024)</h2>
+      <p>🗓 2024 | 🎥 1080p | 💾 1.2GB</p>
+      <a class="download-btn" href="#">📥 Download</a>
+      <iframe src="" allowfullscreen></iframe>
+    </div>
+
+    <!-- KANATARA CHAPTER 01 -->
+    <div class="movie-card">
+      <h2>Kanatara - Chapter 01 (2024)</h2>
+      <p>🗓 2024 | 🎥 1080p | 💾 1.1GB</p>
+      <a class="download-btn" href="#">📥 Download</a>
+      <iframe src="" allowfullscreen></iframe>
+    </div>
+
+    <!-- DUDE -->
+    <div class="movie-card">
+      <h2>Dude (2023)</h2>
+      <p>🗓 2023 | 🎥 720p | 💾 950MB</p>
+      <a class="download-btn" href="#">📥 Download</a>
+      <iframe src="" allowfullscreen></iframe>
+    </div>
+
   </div>
 
-  <!-- MOVIE 03 -->
-  <div class="movie-card">
-    <h2>DUDE (2025)</h2>
-    <p>🗓 2025 | 🗣 TAMIL | 🎥 720p | 💾 1.2GB</p>
-    <a class="download-btn" href="https://example.com/dude.mp4" download>📥 බාගන්න</a>
-    <iframe src="https://www.youtube.com/embed/pyc68HA38Kg" allowfullscreen></iframe>
-  </div>
+  <footer>
+    © 2025 MOVIE ZONE. All Rights Reserved |
+    <a href="#">About</a> |
+    <a href="#">Privacy Policy</a>
+  </footer>
 
-</div>
+  <script>
+    function searchMovies() {
+      var input = document.getElementById("searchInput");
+      var filter = input.value.toUpperCase();
+      var container = document.getElementById("movieContainer");
+      var cards = container.getElementsByClassName("movie-card");
 
-<footer>
-  © 2025 MOVIE ZONE | Telegram Channel
-</footer>
-
-<script>
-function searchMovies() {
-  let input = document.getElementById("searchInput");
-  let filter = input.value.toUpperCase();
-  let cards = document.getElementsByClassName("movie-card");
-
-  for (let i = 0; i < cards.length; i++) {
-    let title = cards[i].getElementsByTagName("h2")[0];
-    let txtValue = title.textContent || title.innerText;
-    cards[i].style.display = txtValue.toUpperCase().includes(filter) ? "" : "none";
-  }
-}
-</script>
+      for (var i = 0; i < cards.length; i++) {
+        var title = cards[i].getElementsByTagName("h2")[0];
+        var txtValue = title.textContent || title.innerText;
+        cards[i].style.display =
+          txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
+      }
+    }
+  </script>
 
 </body>
 </html>
