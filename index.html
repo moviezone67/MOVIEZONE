@@ -13,47 +13,27 @@
   --card:#0f0f12;
   --red:#ff0000;
 }
-
 body{
   margin:0;
   font-family:'Noto Sans Sinhala',sans-serif;
   background:var(--bg);
   color:#fff;
 }
-
 header{
   background:linear-gradient(90deg,var(--neon-1),var(--neon-2));
   text-align:center;
   padding:14px;
 }
-
 header h1{margin:0;color:var(--red);font-size:22px;}
 header p{margin:4px 0;font-size:14px;}
-
-nav{
-  text-align:center;
-  background:#0b0b0b;
-  padding:10px;
-}
-nav a{
-  color:var(--neon-1);
-  margin:0 12px;
-  text-decoration:none;
-  font-weight:700;
-  font-size:14px;
-}
-
+nav{text-align:center;background:#0b0b0b;padding:10px;}
+nav a{color:var(--neon-1);margin:0 12px;text-decoration:none;font-weight:700;font-size:14px;}
 .search-box{text-align:center;margin:12px;}
 .search-box input{
-  width:90%;
-  max-width:460px;
-  padding:9px;
-  border-radius:8px;
-  border:2px solid rgba(0,229,255,.2);
-  background:#0f0f12;
-  color:#00e5ff;
+  width:90%;max-width:460px;
+  padding:9px;border-radius:8px;border:2px solid rgba(0,229,255,.2);
+  background:#0f0f12;color:#00e5ff;
 }
-
 .container{
   padding:14px;
   max-width:1100px;
@@ -62,7 +42,6 @@ nav a{
   grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
   gap:12px;
 }
-
 .movie-card{
   background:var(--card);
   border-radius:10px;
@@ -71,30 +50,13 @@ nav a{
   cursor:pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-
 .movie-card:hover{
   transform: scale(1.03);
   box-shadow: 0 0 15px var(--neon-1);
 }
-
-.movie-card h2{
-  font-size:16px;
-  color:#00e5ff;
-  margin:6px 0;
-}
-
-.movie-card p{
-  font-size:13px;
-  color:#cfeeff;
-}
-
-.poster{
-  width:100%;
-  max-width:260px;
-  border-radius:8px;
-  margin:8px auto;
-}
-
+.movie-card h2{font-size:16px;color:#00e5ff;margin:6px 0;}
+.movie-card p{font-size:13px;color:#cfeeff;}
+.poster{width:100%;max-width:260px;border-radius:8px;margin:8px auto;}
 footer{text-align:center;padding:15px;color:#aaa;font-size:13px;}
 </style>
 </head>
@@ -120,21 +82,19 @@ footer{text-align:center;padding:15px;color:#aaa;font-size:13px;}
   <!-- BISON -->
   <div class="movie-card" onclick="location.href='bison.html'">
     <h2>Bison (2024)</h2>
-    <img src="images/download.jpeg" class="poster">
+    <img src="images/download-1.jpeg" class="poster">
     <p>🗓 2024 | 🎥 1080p | 💾 1.2GB</p>
   </div>
-
   <!-- KANATARA -->
   <div class="movie-card" onclick="location.href='kanatara.html'">
     <h2>Kanatara - Chapter 01 (2024)</h2>
-    <img src="images/download (1).jpeg" class="poster">
+    <img src="images/download-2.jpeg" class="poster">
     <p>🗓 2024 | 🎥 1080p | 💾 1.1GB</p>
   </div>
-
   <!-- DUDE -->
   <div class="movie-card" onclick="location.href='dude.html'">
     <h2>Dude (2023)</h2>
-    <img src="images/download (2).jpeg" class="poster">
+    <img src="images/download-3.jpeg" class="poster">
     <p>🗓 2023 | 🎥 720p | 💾 950MB</p>
   </div>
 </div>
@@ -142,7 +102,7 @@ footer{text-align:center;padding:15px;color:#aaa;font-size:13px;}
 <footer>© 2025 MOVIE ZONE | All Rights Reserved</footer>
 
 <script>
-function searchMovies() {
+function searchMovies(){
   var input=document.getElementById("searchInput").value.toUpperCase();
   var cards=document.getElementsByClassName("movie-card");
   for(var i=0;i<cards.length;i++){
