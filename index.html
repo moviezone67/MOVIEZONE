@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="si">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MOVIE ZONE</title>
-  <meta name="description" content="MOVIE ZONE - Sinhala Movie Download & Watch Online." />
+  <meta name="description" content="MOVIE ZONE - Sinhala Movie Download & Watch Online.">
 
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala&display=swap" rel="stylesheet">
 
@@ -15,202 +15,148 @@
       --bg: #070707;
       --card: #0f0f12;
       --red: #ff0000;
+      --green: #00aa00;
+      --telegram: #0088cc;
     }
 
     body {
       font-family: 'Noto Sans Sinhala', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--bg);
-      color: #fff;
+      margin:0; padding:0;
+      background: var(--bg);
+      color:#fff;
     }
 
-    header {
+    header{
       background: linear-gradient(90deg, var(--neon-1), var(--neon-2));
-      padding: 14px;
-      text-align: center;
-      box-shadow: 0 0 20px var(--neon-1);
+      text-align:center; padding:16px;
+      box-shadow:0 0 24px var(--neon-1);
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 20px;
-      letter-spacing: 1px;
-      color: var(--red);
+    header h1{ margin:0; font-size:22px; color:var(--red);}
+    header p{margin:4px 0; font-size:14px;}
+
+    nav{
+      background:#0b0b0b;
+      text-align:center; padding:10px;
     }
 
-    nav {
-      background-color: #0b0b0b;
-      padding: 10px;
-      text-align: center;
+    nav a{
+      color:var(--neon-1);
+      margin:0 12px;
+      text-decoration:none;
+      font-weight:700; font-size:14px;
     }
 
-    nav a {
-      color: var(--neon-1);
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 14px;
+    .container{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap:16px;
+      max-width:1100px;
+      margin:20px auto;
+      padding:0 10px;
     }
 
-    .search-box {
-      text-align: center;
-      margin: 14px 0;
+    .movie-card{
+      background:var(--card);
+      border-radius:10px;
+      text-align:center;
+      padding:10px;
+      box-shadow:0 0 12px rgba(0,229,255,0.2);
+      transition: transform 0.3s;
     }
 
-    .search-box input {
-      padding: 9px 12px;
-      width: 90%;
-      max-width: 460px;
-      background: #0f0f12;
-      border: 2px solid rgba(0,229,255,.12);
-      color: var(--neon-1);
-      border-radius: 8px;
-      font-size: 14px;
+    .movie-card:hover{
+      transform: translateY(-4px);
     }
 
-    .container {
-      padding: 14px;
-      max-width: 1100px;
-      margin: 0 auto;
+    .movie-card img{
+      width:100%;
+      max-width:260px;
+      border-radius:8px;
+      margin-bottom:8px;
     }
 
-    .movie-card {
-      background-color: var(--card);
-      border: 1px solid rgba(0,229,255,.06);
-      border-radius: 10px;
-      padding: 10px;
-      margin-bottom: 10px;
-      text-align: center;
+    .movie-card h2{ color:var(--neon-1); font-size:16px; margin:6px 0;}
+    .movie-card p{color:#cfeeff; font-size:13px; margin:4px 0;}
+
+    .btn{
+      display:inline-block;
+      padding:7px 14px;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:13px;
+      margin:4px 4px 4px 0;
+      color:white;
     }
 
-    .movie-card h2 {
-      color: var(--neon-1);
-      font-size: 16px;
-      margin: 6px 0;
+    .download{background:var(--red);}
+    .telegram{background:var(--telegram);}
+    .details-btn{background:var(--green);}
+
+    footer{
+      text-align:center;
+      padding:16px;
+      background:#070707;
+      color:#9fbfdf;
+      margin-top:20px;
+      font-size:13px;
     }
 
-    .movie-card p {
-      color: #cfeeff;
-      font-size: 13px;
-      margin: 6px 0;
-    }
-
-    .poster-img {
-      width: 100%;
-      max-width: 260px;
-      margin: 8px auto;
-      border-radius: 8px;
-      display: block;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 7px 14px;
-      margin: 6px 4px;
-      border-radius: 7px;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 13px;
-      color: #fff;
-    }
-
-    .direct-btn { background: linear-gradient(90deg, var(--red), #cc0000); }
-    .telegram-btn { background: #0088cc; }
-    .details-btn { background: #ff8800; }
-
-    footer {
-      text-align: center;
-      padding: 16px;
-      background-color: #070707;
-      color: #9fbfdf;
-      margin-top: 18px;
-      font-size: 13px;
-    }
-
-    footer a {
-      color: var(--neon-1);
-    }
+    footer a{color:var(--neon-1);}
   </style>
 </head>
-
 <body>
 
-  <header>
-    <h1>🎬 MOVIE ZONE</h1>
-    <p>සිංහල චිත්‍රපට ඔබට!</p>
-  </header>
+<header>
+  <h1>🎬 MOVIE ZONE</h1>
+  <p>සිංහල චිත්‍රපට ඔබට!</p>
+</header>
 
-  <nav>
-    <a href="#">මුල් පිටුව</a>
-    <a href="#">Download</a>
-    <a href="#">Watch</a>
-    <a href="#">Contact</a>
-  </nav>
+<nav>
+  <a href="#">මුල් පිටුව</a>
+  <a href="#">Download</a>
+  <a href="#">Watch</a>
+  <a href="#">Contact</a>
+</nav>
 
-  <div class="search-box">
-    <input type="text" id="searchInput" onkeyup="searchMovies()" placeholder="🔍 චිත්‍රපටය සොයන්න..." />
+<div class="container">
+
+  <!-- BISON -->
+  <div class="movie-card">
+    <img src="download.jpeg" alt="Bison Poster">
+    <h2>Bison (2024)</h2>
+    <p>🎥 1080p | 💾 1.2GB</p>
+    <a href="bison.html" class="btn details-btn">🔍 View Details</a>
+    <a href="#" class="btn download">📥 Direct Download</a>
+    <a href="https://t.me/YOUR_TELEGRAM_BOT" class="btn telegram">🤖 Telegram</a>
   </div>
 
-  <div class="container" id="movieContainer">
-
-    <!-- ✅ BISON -->
-    <div class="movie-card">
-      <h2>Bison (2024)</h2>
-      <img src="https://moviezone67.github.io/MOVIEZONE/download.jpeg" class="poster-img">
-      <p>🗓 2024 | 🎥 1080p | 💾 1.2GB</p>
-
-      <a class="btn details-btn" href="bison.html" target="_blank">📖 Film Details</a>
-      <a class="btn direct-btn" href="#" target="_blank">📥 Direct Download</a>
-      <a class="btn telegram-btn" href="https://t.me/YOUR_TELEGRAM_BOT" target="_blank">🤖 Telegram</a>
-    </div>
-
-    <!-- ✅ KANATARA -->
-    <div class="movie-card">
-      <h2>Kanatara - Chapter 01 (2024)</h2>
-      <img src="https://moviezone67.github.io/MOVIEZONE/download%20(1).jpeg" class="poster-img">
-      <p>🗓 2024 | 🎥 1080p | 💾 1.1GB</p>
-
-      <a class="btn details-btn" href="kanatara.html" target="_blank">📖 Film Details</a>
-      <a class="btn direct-btn" href="#" target="_blank">📥 Direct Download</a>
-      <a class="btn telegram-btn" href="https://t.me/YOUR_TELEGRAM_BOT" target="_blank">🤖 Telegram</a>
-    </div>
-
-    <!-- ✅ DUDE -->
-    <div class="movie-card">
-      <h2>Dude (2023)</h2>
-      <img src="https://moviezone67.github.io/MOVIEZONE/download%20(2).jpeg" class="poster-img">
-      <p>🗓 2023 | 🎥 720p | 💾 950MB</p>
-
-      <a class="btn details-btn" href="dude.html" target="_blank">📖 Film Details</a>
-      <a class="btn direct-btn" href="#" target="_blank">📥 Direct Download</a>
-      <a class="btn telegram-btn" href="https://t.me/YOUR_TELEGRAM_BOT" target="_blank">🤖 Telegram</a>
-    </div>
-
+  <!-- KANATARA -->
+  <div class="movie-card">
+    <img src="download (1).jpeg" alt="Kanatara Poster">
+    <h2>Kanatara - Chapter 01 (2024)</h2>
+    <p>🎥 1080p | 💾 1.1GB</p>
+    <a href="kanatara.html" class="btn details-btn">🔍 View Details</a>
+    <a href="#" class="btn download">📥 Direct Download</a>
+    <a href="https://t.me/YOUR_TELEGRAM_BOT" class="btn telegram">🤖 Telegram</a>
   </div>
 
-  <footer>
-    © 2025 MOVIE ZONE | All Rights Reserved
-  </footer>
+  <!-- DUDE -->
+  <div class="movie-card">
+    <img src="download (2).jpeg" alt="Dude Poster">
+    <h2>Dude (2023)</h2>
+    <p>🎥 720p | 💾 950MB</p>
+    <a href="dude.html" class="btn details-btn">🔍 View Details</a>
+    <a href="#" class="btn download">📥 Direct Download</a>
+    <a href="https://t.me/YOUR_TELEGRAM_BOT" class="btn telegram">🤖 Telegram</a>
+  </div>
 
-  <script>
-    function searchMovies() {
-      var input = document.getElementById("searchInput");
-      var filter = input.value.toUpperCase();
-      var cards = document.getElementsByClassName("movie-card");
+</div>
 
-      for (var i = 0; i < cards.length; i++) {
-        var title = cards[i].getElementsByTagName("h2")[0];
-        var txtValue = title.textContent || title.innerText;
-
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          cards[i].style.display = "";
-        } else {
-          cards[i].style.display = "none";
-        }
-      }
-    }
-  </script>
+<footer>
+  © 2025 MOVIE ZONE | All Rights Reserved
+</footer>
 
 </body>
 </html>
