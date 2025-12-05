@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MOVIE ZONE - Sinhala Dubbed Movies</title>
+  <meta name="description" content="MOVIE ZONE - Sinhala dubbed movie downloads and online watch site. Download your favorite movies now." />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --neon-1: #00e5ff; /* original neon gradient start */
+      --neon-2: #0072ff; /* original neon gradient end */
+      --bg: #070707;
+      --card: #0f0f12;
+      --red: #ff0000; /* pure red for header text & download button */
+    }
+
+    body {
+      font-family: 'Noto Sans Sinhala', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: #fff;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--neon-1), var(--neon-2));
+      padding: 18px 12px;
+      text-align: center;
+      box-shadow: 0 0 28px var(--neon-1);
+      border-bottom: 2px solid rgba(0, 230, 255, .25);
+      position: relative;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .logo-svg {
+      width: 260px;
+      height: 64px;
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    /* header text “MOVIE ZONE” pure red */
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: var(--red);
+      text-shadow: 0 0 8px rgba(255,0,0,0.9);
+      font-weight: 700;
+    }
+
+    header p {
+      margin: 2px 0 0 0;
+      font-size: 13px;
+      color: rgba(255,200,200,.9);
+      text-shadow: 0 0 6px rgba(255,0,0,.3);
+    }
+
+    nav {
+      background-color: #0b0b0b;
+      padding: 10px;
+      text-align: center;
+      border-top: 1px solid rgba(0,122,255,.08);
+      border-bottom: 1px solid rgba(0,122,255,.08);
+      box-shadow: 0 1px 0 rgba(0,0,0,.6) inset;
+    }
+
+    nav a {
+      color: var(--neon-1);
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 700;
+      text-shadow: 0 0 8px rgba(0,229,255,.35);
+      font-size: 14px;
+    }
+
+    .search-box {
+      text-align: center;
+      margin: 18px 0;
+    }
+
+    .search-box input {
+      padding: 10px 12px;
+      width: 86%;
+      max-width: 480px;
+      border: 2px solid rgba(0,229,255,.12);
+      background: linear-gradient(180deg, #0c0c0c, #0f0f12);
+      border-radius: 8px;
+      font-size: 15px;
+      color: var(--neon-1);
+      box-shadow: 0 0 18px rgba(0,229,255,.06);
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .movie-card {
+      background-color: var(--card);
+      border: 1px solid rgba(0,229,255,.06);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.6), 0 0 18px rgba(0,229,255,.03);
+    }
+
+    .movie-card h2 {
+      color: var(--neon-1);
+      margin: 0 0 8px 0;
+      text-shadow: 0 0 10px rgba(0,229,255,.25);
+      font-size: 18px;
+    }
+
+    .movie-card p {
+      margin: 4px 0;
+      color: #cfeeff;
+      opacity: 0.9;
+      font-size: 14px;
+    }
+
+    .download-btn {
+      background: linear-gradient(90deg, var(--red), #cc0000); /* red gradient */
+      color: white;
+      padding: 10px 18px;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 800;
+      box-shadow: 0 0 18px rgba(255,0,0,.35);
+      border: 1px solid rgba(255,0,0,.05);
+    }
+
+    .download-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .trailer {
+      margin-top: 12px;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0,229,255,.06);
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px;
+      background-color: #070707;
+      color: #9fbfdf;
+      border-top: 1px solid rgba(0,122,255,.06);
+      margin-top: 18px;
+    }
+
+    footer a {
+      color: var(--neon-1);
+      text-decoration: none;
+      margin: 0 6px;
+    }
+
+    @media (max-width:600px){
+      .header-inner { gap: 10px; padding: 0 8px; }
+      .logo-svg { width: 220px; height: 54px; }
+      header h1 { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <!-- SVG logo retains original gradient colors -->
+      <svg class="logo-svg" viewBox="0 0 640 160" xmlns="http://www.w3.org/2000/svg" aria-label="MOVIE ZONE logo">
+        <defs>
+          <filter id="neon" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="6" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+
+          <linearGradient id="gradA" x1="0" x2="1">
+            <stop offset="0" stop-color="#00e5ff"/>
+            <stop offset="1" stop-color="#0072ff"/>
+          </linearGradient>
+        </defs>
+
+        <rect x="6" y="6" rx="18" ry="18" width="628" height="148" fill="none" stroke="url(#gradA)" stroke-opacity="0.08" stroke-width="2" />
+        <g filter="url(#neon)">
+          <g transform="translate(28,22) scale(1.0)">
+            <circle cx="54" cy="54" r="44" fill="#001f2a" stroke="url(#gradA)" stroke-width="4"/>
+            <circle cx="34" cy="40" r="6" fill="#00e5ff" opacity="0.95"/>
+            <circle cx="74" cy="40" r="6" fill="#00e5ff" opacity="0.95"/>
+            <circle cx="54" cy="68" r="6" fill="#00e5ff" opacity="0.95"/>
+            <circle cx="44" cy="84" r="6" fill="#00e5ff" opacity="0.95"/>
+            <circle cx="64" cy="84" r="6" fill="#00e5ff" opacity="0.95"/>
+            <circle cx="54" cy="54" r="26" fill="url(#gradA)" opacity="0.12" />
+            <circle cx="54" cy="54" r="22" fill="#001219" />
+          </g>
+
+          <text x="150" y="72" font-family="Noto Sans Sinhala, Arial" font-weight="800" font-size="56" fill="url(#gradA)" style="letter-spacing:2px;">
+            MOVIE
+          </text>
+          <text x="150" y="120" font-family="Noto Sans Sinhala, Arial" font-weight="700" font-size="36" fill="#00eaff" style="letter-spacing:1px;">
+            ZONE
+          </text>
+          <text x="420" y="40" font-family="Noto Sans Sinhala, Arial" font-weight="600" font-size="14" fill="#cfeeff" opacity="0.95">
+            සිංහල ඩබ් සිනමා
+          </text>
+          <rect x="150" y="96" width="215" height="6" rx="3" fill="#00e5ff" opacity="0.18"/>
+        </g>
+      </svg>
+
+      <div style="text-align:left;">
+        <h1>MOVIE ZONE</h1>
+        <p>සිංහල ඩබ් සිනමා නිර්මාණ ඔබට!</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#">මුල් පිටුව</a>
+    <a href="#">Download</a>
+    <a href="#">Watch Online</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" onkeyup="searchMovies()" placeholder="🔍 චිත්‍රපටය සොයන්න..." />
+  </div>
+
+  <div class="container" id="movieContainer">
+    <div class="movie-card">
+      <h2>John Wick 4 (2023) Sinhala Dubbed</h2>
+      <p>🗓 2023 | 🗣 සිංහල | 🎥 720p | 💾 950MB</p>
+      <a class="download-btn" href="#">📥 බාගන්න</a>
+      <div class="trailer">
+        <iframe src="https://www.youtube.com/embed/qEVUtrk8_B4" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="movie-card">
+      <h2>Avatar 2: Way of Water (2022) Sinhala Dubbed</h2>
+      <p>🗓 2022 | 🗣 සිංහල | 🎥 1080p | 💾 1.5GB</p>
+      <a class="download-btn" href="#">📥 බාගන්න</a>
+      <div class="trailer">
+        <iframe src="https://www.youtube.com/embed/d9MyW72ELq0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="movie-card">
+      <h2>Fast X (2023) Sinhala Dubbed</h2>
+      <p>🗓 2023 | 🗣 සිංහල | 🎥 720p | 💾 1.2GB</p>
+      <a class="download-btn" href="#">📥 බාගන්න</a>
+      <div class="trailer">
+        <iframe src="https://www.youtube.com/embed/32RAq6JzY-w" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 MOVIE ZONE. සියලුම හිමිකම් ඇවිරිණි. |
+    <a href="#">About</a> |
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Telegram Channel</a>
+  </footer>
+
+  <script>
+    function searchMovies() {
+      var input, filter, container, cards, title, i, txtValue;
+      input = document.getElementById("searchInput");
+      filter = input.value.toUpperCase();
+      container = document.getElementById("movieContainer");
+      cards = container.getElementsByClassName("movie-card");
+
+      for (i = 0; i < cards.length; i++) {
+        title = cards[i].getElementsByTagName("h2")[0];
+        txtValue = title.textContent || title.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          cards[i].style.display = "";
+        } else {
+          cards[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
